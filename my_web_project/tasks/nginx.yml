@@ -1,0 +1,10 @@
+---
+- name: Update the repository cache and install nginx
+  apt:
+   name: nginx
+   update_cache: yes
+
+- name: start nginx
+  service:
+   name: nginx
+   state: started

@@ -1,0 +1,14 @@
+---
+- name: Create directory
+  file: 
+   path: /var/www/logs
+   state: directory
+   owner: www-data
+   group: www-data
+
+- name: Create file site.error.log
+  file:
+   path: /var/www/logs/site.error.log
+   state: touch
+   owner: www-data
+   group: www-data

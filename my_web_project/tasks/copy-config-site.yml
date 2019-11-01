@@ -1,0 +1,8 @@
+---
+- name: copy-config-site
+  copy:
+   src: my_web_project/files/site.conf 
+   dest: "{{ destin_folder }}"
+   owner: www-data
+   group: www-data
+   mode: '0644'

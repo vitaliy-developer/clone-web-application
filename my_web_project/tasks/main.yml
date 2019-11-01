@@ -1,0 +1,17 @@
+---
+- name: Install nginx
+  import_tasks: nginx.yml
+
+- name: git-clone-project
+  import_tasks: git-clone-project.yml
+
+- name: touch folder & file
+  import_tasks: create-folder-file.yml
+
+- name: copy-config-site
+  import_tasks: copy-config-site.yml
+
+- name: FINISH =^.^=
+  service:
+   name: nginx 
+   state: restarted
